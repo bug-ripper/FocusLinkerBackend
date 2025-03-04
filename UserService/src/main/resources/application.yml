@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: UserService
+  config:
+    import: optional:configserver:http://localhost:8888
+    activate:
+      on-profile: dev
+  cloud:
+    config:
+      fail-fast: true
+      uri: http://localhost:8888

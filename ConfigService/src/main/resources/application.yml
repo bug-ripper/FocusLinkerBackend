@@ -1,0 +1,13 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: ConfigService
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:bug-ripper/FocusLinkerConfigs.git
+          default-label: main
+          search-paths: "{application}"
